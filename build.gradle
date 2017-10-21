@@ -13,7 +13,7 @@ task cucumber() {
         javaexec {
             main = "cucumber.api.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-            args = ['--plugin', 'pretty', '--glue', 'com.example.cucumber', 'src/test/resources']
+            args = ['--plugin', 'pretty', '--glue', 'com.example.tests', 'src/test/resources']
         }
     }
 }
@@ -25,8 +25,10 @@ repositories {
 dependencies {
     compile 'com.google.guava:guava:22.0'
 
+    testCompile 'org.seleniumhq.selenium:selenium-java:3.6.0'
     testCompile 'io.cucumber:cucumber-java:2.0.1'
     testCompile 'io.cucumber:cucumber-junit:2.0.1'
-
+    testCompile 'io.cucumber:cucumber-picocontainer:2.0.1'
+    testCompile 'org.picocontainer:picocontainer:1.2'
     testCompile 'junit:junit:4.12'
 }
