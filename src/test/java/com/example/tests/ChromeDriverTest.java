@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ * This is just a sample test to verify chrome driver works correctly
+ */
 public class ChromeDriverTest {
 
     @Test

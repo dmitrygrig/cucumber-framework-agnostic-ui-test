@@ -1,38 +1,37 @@
 package com.example.tests.features;
 
-import com.example.tests.drivers.SharedDriver;
+import com.example.tests.foundation.interfaces.SearchResultsScreen;
+import com.example.tests.foundation.interfaces.SearchScreen;
+import com.example.tests.foundation.selenium.SeleniumPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 public class GoogleSearch {
 
-    private final SharedDriver driver;
+    private final SeleniumPage page;
 
-    public GoogleSearch(SharedDriver webDriver) {
-        this.driver = webDriver;
+    public GoogleSearch(SeleniumPage page) {
+        this.page = page;
     }
 
     @Given("^Google initial page is open$")
     public void google_initial_page_is_open() throws Exception {
-        driver.get("http://www.google.com/xhtml");
-        Thread.sleep(5000);  // Let the user actually see something!
+        page.navigateTo("http://www.google.com/xhtml");
     }
 
     @When("^I search for 'ChromeDriver'$")
     public void i_search_for_ChromeDriver() throws Exception {
-        WebElement searchBox = driver.findElement(By.name("q"));
-        searchBox.sendKeys("ChromeDriver");
-        searchBox.submit();
+        SearchScreen searchScreen = page.asScreen(SearchScreen.class);
+        searchScreen.setSearchText("ChromeDriver");
+        searchScreen.search();
     }
 
     @Then("^Page with results is opened$")
     public void page_with_results_is_opened() throws Exception {
-        WebElement resultsDiv = driver.findElement(By.id("resultStats"));
-        Assert.assertNotNull(resultsDiv);
+        SearchResultsScreen searchScreen = page.asScreen(SearchResultsScreen.class);
+        Assert.assertTrue(searchScreen.hasResults());
     }
 
 
