@@ -4,22 +4,16 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
-/**
- * This is just a sample test to verify chrome driver works correctly
- */
-public class ChromeDriverTest {
+public class FirefoxDriverTest {
+
 
     @Test
     public void testGoogleSearch() throws InterruptedException {
-        // Optional, if not specified, WebDriver will search your path for chromedriver.
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
+        System.setProperty("webdriver.gecko.driver", "drivers/geckodriver");
 
-        ChromeOptions options = new ChromeOptions();
-        options.setHeadless(true);
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         driver.get("http://www.google.com/xhtml");
         Thread.sleep(5000);  // Let the user actually see something!
         WebElement searchBox = driver.findElement(By.name("q"));

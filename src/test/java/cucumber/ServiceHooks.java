@@ -14,6 +14,7 @@ public class ServiceHooks {
     @After
     public void before(Scenario scenario) {
         if (scenario.isFailed()) {
+            // TODO: add screenshot for report
             System.out.printf("Screenshot");
         }
     }

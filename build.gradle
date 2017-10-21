@@ -15,7 +15,22 @@ task cucumber() {
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = ['--plugin', 'html:target/report', '--glue', 'cucumber.steps', 'src/test/resources/features']
             jvmArgs = ['-Dwebdriver=CHROME',
-                       '-Dwebdriver.chrome.driver=drivers/chromedriver'
+                       '-Dwebdriver.chrome.driver=drivers/chromedriver',
+                       '-Dheadless=true'
+            ]
+        }
+    }
+}
+
+task cucumberFirefox() {
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "cucumber.api.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'html:target/report', '--glue', 'cucumber.steps', 'src/test/resources/features']
+            jvmArgs = ['-Dwebdriver=FIREFOX',
+                       '-Dwebdriver.gecko.driver=drivers/geckodriver'
             ]
         }
     }

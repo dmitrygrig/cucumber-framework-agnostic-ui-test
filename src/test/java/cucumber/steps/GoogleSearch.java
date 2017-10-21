@@ -34,4 +34,10 @@ public class GoogleSearch {
         Assert.assertTrue(searchScreen.hasResults());
     }
 
+    @Then("^No search results exist$")
+    public void no_search_results_exist() throws Exception {
+        SearchResultsScreen searchScreen = page.asScreen(SearchResultsScreen.class);
+        Assert.assertFalse(searchScreen.hasResults());
+    }
+
 }

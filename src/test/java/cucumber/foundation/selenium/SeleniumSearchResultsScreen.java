@@ -3,6 +3,7 @@ package cucumber.foundation.selenium;
 import cucumber.drivers.SharedDriver;
 import cucumber.foundation.interfaces.SearchResultsScreen;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 
 public class SeleniumSearchResultsScreen extends SeleniumScreen implements SearchResultsScreen {
@@ -13,7 +14,11 @@ public class SeleniumSearchResultsScreen extends SeleniumScreen implements Searc
 
     @Override
     public boolean hasResults() {
-        WebElement resultsDiv = this.getDriver().findElement(By.id("resultStats"));
-        return resultsDiv != null;
+        try {
+            WebElement resultsDiv = this.getDriver().findElement(By.id("resultStats"));
+            return true;
+        } catch (NoSuchElementException ex) {
+            return false;
+        }
     }
 }
