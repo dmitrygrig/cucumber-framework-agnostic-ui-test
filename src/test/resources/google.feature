@@ -1,4 +1,4 @@
-Feature: Google test
+Feature: Google search
 
   Scenario: Navigation to google
     Given Google initial page is open

@@ -1,4 +1,4 @@
-package com.example.tests.steps;
+package com.example.tests.features;
 
 import com.example.tests.drivers.SharedDriver;
 import cucumber.api.java.en.Given;
@@ -8,11 +8,11 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class GoogleStepDefs {
+public class GoogleSearch {
 
     private final SharedDriver driver;
 
-    public GoogleStepDefs(SharedDriver webDriver) {
+    public GoogleSearch(SharedDriver webDriver) {
         this.driver = webDriver;
     }
 
