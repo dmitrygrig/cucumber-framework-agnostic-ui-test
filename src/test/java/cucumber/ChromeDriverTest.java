@@ -1,4 +1,4 @@
-package com.example.tests;
+package cucumber;
 
 import org.junit.Test;
 import org.openqa.selenium.By;

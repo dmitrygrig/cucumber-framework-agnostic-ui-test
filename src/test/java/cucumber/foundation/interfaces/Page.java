@@ -1,4 +1,4 @@
-package com.example.tests.foundation.interfaces;
+package cucumber.foundation.interfaces;
 
 public interface Page {
 

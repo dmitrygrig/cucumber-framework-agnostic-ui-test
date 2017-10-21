@@ -1,7 +1,7 @@
-package com.example.tests.foundation.selenium;
+package cucumber.foundation.selenium;
 
-import com.example.tests.drivers.SharedDriver;
-import com.example.tests.foundation.interfaces.SearchResultsScreen;
+import cucumber.drivers.SharedDriver;
+import cucumber.foundation.interfaces.SearchResultsScreen;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

@@ -1,7 +1,7 @@
-package com.example.tests.foundation.selenium;
+package cucumber.foundation.selenium;
 
-import com.example.tests.drivers.SharedDriver;
-import com.example.tests.foundation.interfaces.SearchScreen;
+import cucumber.drivers.SharedDriver;
+import cucumber.foundation.interfaces.SearchScreen;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -12,8 +12,8 @@ public class SeleniumSearchScreen extends SeleniumScreen implements SearchScreen
     }
 
     @Override
-    public void setSearchText(String chromeDriver) {
-        getSeachBox().sendKeys("ChromeDriver");
+    public void setSearchText(String term) {
+        getSeachBox().sendKeys(term);
     }
 
     @Override

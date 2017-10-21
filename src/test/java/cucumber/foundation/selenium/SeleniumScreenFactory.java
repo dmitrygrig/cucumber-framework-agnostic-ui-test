@@ -1,10 +1,10 @@
-package com.example.tests.foundation.selenium;
+package cucumber.foundation.selenium;
 
-import com.example.tests.drivers.SharedDriver;
-import com.example.tests.foundation.interfaces.Screen;
-import com.example.tests.foundation.interfaces.ScreenFactory;
-import com.example.tests.foundation.interfaces.SearchResultsScreen;
-import com.example.tests.foundation.interfaces.SearchScreen;
+import cucumber.drivers.SharedDriver;
+import cucumber.foundation.interfaces.Screen;
+import cucumber.foundation.interfaces.ScreenFactory;
+import cucumber.foundation.interfaces.SearchResultsScreen;
+import cucumber.foundation.interfaces.SearchScreen;
 
 public class SeleniumScreenFactory implements ScreenFactory {
 

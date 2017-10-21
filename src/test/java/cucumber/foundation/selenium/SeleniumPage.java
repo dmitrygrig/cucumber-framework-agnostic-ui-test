@@ -1,13 +1,13 @@
-package com.example.tests.foundation.selenium;
+package cucumber.foundation.selenium;
 
-import com.example.tests.drivers.SharedDriver;
-import com.example.tests.foundation.interfaces.Page;
-import com.example.tests.foundation.interfaces.Screen;
+import cucumber.drivers.SharedDriver;
+import cucumber.foundation.interfaces.Page;
+import cucumber.foundation.interfaces.Screen;
 
 public class SeleniumPage implements Page {
 
     private final SharedDriver driver;
-    private SeleniumScreenFactory screenFactory;
+    private final SeleniumScreenFactory screenFactory;
 
     public SeleniumPage(SharedDriver driver) {
         this.driver = driver;
