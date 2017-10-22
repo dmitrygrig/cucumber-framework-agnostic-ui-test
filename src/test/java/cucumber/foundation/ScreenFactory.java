@@ -1,4 +1,4 @@
-package cucumber.foundation.web;
+package cucumber.foundation;
 
 @SuppressWarnings("unused")
 public interface ScreenFactory {

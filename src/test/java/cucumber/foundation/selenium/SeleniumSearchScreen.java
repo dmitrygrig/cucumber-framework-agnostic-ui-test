@@ -1,7 +1,6 @@
-package cucumber.foundation.web.selenium;
+package cucumber.foundation.selenium;
 
-import cucumber.drivers.SharedDriver;
-import cucumber.foundation.web.SearchScreen;
+import cucumber.foundation.SearchScreen;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

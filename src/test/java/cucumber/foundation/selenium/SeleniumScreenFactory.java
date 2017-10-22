@@ -1,10 +1,9 @@
-package cucumber.foundation.web.selenium;
+package cucumber.foundation.selenium;
 
-import cucumber.drivers.SharedDriver;
-import cucumber.foundation.web.Screen;
-import cucumber.foundation.web.ScreenFactory;
-import cucumber.foundation.web.SearchResultsScreen;
-import cucumber.foundation.web.SearchScreen;
+import cucumber.foundation.Screen;
+import cucumber.foundation.ScreenFactory;
+import cucumber.foundation.SearchResultsScreen;
+import cucumber.foundation.SearchScreen;
 
 public class SeleniumScreenFactory implements ScreenFactory {
 

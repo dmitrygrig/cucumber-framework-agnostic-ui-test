@@ -1,8 +1,7 @@
-package cucumber.foundation.web.selenium;
+package cucumber.foundation.selenium;
 
-import cucumber.drivers.SharedDriver;
-import cucumber.foundation.web.Page;
-import cucumber.foundation.web.Screen;
+import cucumber.foundation.Page;
+import cucumber.foundation.Screen;
 
 public class SeleniumPage implements Page {
 

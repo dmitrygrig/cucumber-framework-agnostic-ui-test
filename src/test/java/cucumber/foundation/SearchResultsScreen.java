@@ -1,4 +1,4 @@
-package cucumber.foundation.web;
+package cucumber.foundation;
 
 public interface SearchResultsScreen extends Screen {
 
