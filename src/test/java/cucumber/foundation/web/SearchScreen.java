@@ -1,4 +1,4 @@
-package cucumber.foundation.interfaces;
+package cucumber.foundation.web;
 
 public interface SearchScreen extends Screen {
     void setSearchText(String chromeDriver);
