@@ -19,6 +19,13 @@ public class SeleniumSearchScreen extends SeleniumScreen implements SearchScreen
     @Override
     public void search() {
         getSeachBox().submit();
+
+        // wait for navigation
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
 
