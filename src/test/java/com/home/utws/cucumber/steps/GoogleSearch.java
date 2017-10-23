@@ -1,15 +1,16 @@
-package cucumber.steps;
+package com.home.utws.cucumber.steps;
 
+import com.home.utws.foundation.interfaces.SearchResultsScreen;
+import com.home.utws.foundation.interfaces.SearchScreen;
+import com.home.utws.foundation.selenium.SeleniumPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import cucumber.foundation.SearchResultsScreen;
-import cucumber.foundation.SearchScreen;
-import cucumber.foundation.selenium.SeleniumPage;
 import org.junit.Assert;
 
 public class GoogleSearch {
 
+    // TODO: on this place should Page interface
     private final SeleniumPage page;
 
     public GoogleSearch(SeleniumPage page) {

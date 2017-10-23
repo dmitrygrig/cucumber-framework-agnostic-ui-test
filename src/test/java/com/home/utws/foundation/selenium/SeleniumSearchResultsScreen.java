@@ -1,6 +1,7 @@
-package cucumber.foundation.selenium;
+package com.home.utws.foundation.selenium;
 
-import cucumber.foundation.SearchResultsScreen;
+import com.home.utws.foundation.interfaces.SearchResultsScreen;
+import com.home.utws.foundation.selenium.drivers.SharedDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;

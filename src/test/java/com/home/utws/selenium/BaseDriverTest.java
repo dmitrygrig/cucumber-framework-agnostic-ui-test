@@ -1,4 +1,4 @@
-package drivertests;
+package com.home.utws.selenium;
 
 import org.junit.Test;
 import org.openqa.selenium.By;

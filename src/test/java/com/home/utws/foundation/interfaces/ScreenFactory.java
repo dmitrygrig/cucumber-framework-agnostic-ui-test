@@ -1,6 +1,6 @@
-package cucumber.foundation;
+package com.home.utws.foundation.interfaces;
 
-@SuppressWarnings("unused")
+@FunctionalInterface
 public interface ScreenFactory {
 
     <T extends Screen> T create(Class<T> clazz);

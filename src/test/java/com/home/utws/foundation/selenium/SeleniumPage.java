@@ -1,7 +1,9 @@
-package cucumber.foundation.selenium;
+package com.home.utws.foundation.selenium;
 
-import cucumber.foundation.Page;
-import cucumber.foundation.Screen;
+
+import com.home.utws.foundation.interfaces.Page;
+import com.home.utws.foundation.interfaces.Screen;
+import com.home.utws.foundation.selenium.drivers.SharedDriver;
 
 public class SeleniumPage implements Page {
 
@@ -20,6 +22,6 @@ public class SeleniumPage implements Page {
 
     @Override
     public <T extends Screen> T asScreen(Class<T> clazz) {
-        return screenFactory.create(clazz);
+        return (T) screenFactory.create(clazz);
     }
 }

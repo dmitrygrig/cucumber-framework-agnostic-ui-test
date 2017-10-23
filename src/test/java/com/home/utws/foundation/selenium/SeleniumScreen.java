@@ -1,6 +1,7 @@
-package cucumber.foundation.selenium;
+package com.home.utws.foundation.selenium;
 
-import cucumber.foundation.Screen;
+import com.home.utws.foundation.interfaces.Screen;
+import com.home.utws.foundation.selenium.drivers.SharedDriver;
 
 public class SeleniumScreen implements Screen {
 

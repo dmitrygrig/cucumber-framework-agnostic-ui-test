@@ -1,4 +1,4 @@
-package drivertests;
+package com.home.utws.selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
