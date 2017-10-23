@@ -12,6 +12,8 @@ public class GoogleSearch {
 
     // TODO: on this place should Page interface
     private final SeleniumPage page;
+    // .. or alternatively
+    // private final MockPage page;
 
     public GoogleSearch(SeleniumPage page) {
         this.page = page;
